@@ -1,0 +1,47 @@
+.social {
+  border-top: @b-light;
+  border-bottom: @b-light;
+}
+
+.social__list {
+  .list-reset();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social__item {
+  align-self: baseline;
+  margin: 20px 0;
+}
+
+.social__image {
+  fill: @bg-darkgrey;
+
+  &:hover {
+    fill: @bg-green;
+    transition: 0.4s;
+  }
+
+  &:active {
+    fill: @bg-verylightgreen;
+    transition: 0.4s;
+  }
+
+  &--vkontakte {
+    width: 22px;
+    height: 12px;
+    margin-top: 0;
+  }
+
+  &--instagram {
+    width: 17px;
+    height: 17px;
+    margin: 0 40px 0 36px;
+  }
+
+  &--facebook {
+    width: 10px;
+    height: 19px;
+  }
+}

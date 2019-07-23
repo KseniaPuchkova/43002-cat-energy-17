@@ -1,0 +1,26 @@
+.catalog-gift {
+  display: block;
+  width: 244px;
+  height: 289px;
+  margin: 30px auto;
+  background: @bg-green url("../img/gift-photo-mobile@1x.jpg") center no-repeat;
+}
+
+.catalog-gift__text {
+  position: relative;
+  margin: 0 auto;
+  padding: 187px 40px 60px 40px;
+  font: normal 16px/20px @font-arial;
+  text-align: center;
+  color: @white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 65px;
+    left: 40%;
+    width: 56px;
+    height: 61px;
+    background: url("../img/icon-gift.svg") no-repeat center;
+  }
+}

@@ -1,0 +1,36 @@
+.catalog-more {
+  position: relative;
+  border-bottom: @b-light;
+}
+
+.catalog-more__title {
+  margin: 85px 0 -5px 0;
+  font: normal 16px/20px @font-oswald;
+  text-align: center;
+  text-transform: uppercase;
+  color: @black;
+}
+
+.catalog-more__plus::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  width: 31px;
+  height: 31px;
+  margin-left: -15px;
+  background: url("../img/icon-plus-mobile.svg") no-repeat;
+  opacity: 0.2;
+}
+
+.catalog-more__text {
+  margin-bottom: 20px;
+  font: normal 12px/16px @font-arial;
+  text-align: center;
+}
+
+.catalog-more__button {
+  margin-bottom: 20px;
+  background-color: @bg-grey;
+  color: @grey;
+}

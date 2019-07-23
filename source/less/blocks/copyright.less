@@ -1,0 +1,37 @@
+.copyright {
+  margin: 0;
+}
+
+.copyright__link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover .copyright__image {
+    fill: @bg-green;
+  }
+
+  &:active .copyright__image {
+    fill: @bg-verylightgreen;
+  }
+}
+
+.copyright__name {
+  display: block;
+  font: normal 16px/16px @font-arial;
+  color: @grey;
+  cursor: pointer;
+}
+
+.copyright__image {
+  margin-top: 3px;
+  fill: @bg-darkgrey;
+  transition: 0.4s;
+  cursor: pointer;
+}

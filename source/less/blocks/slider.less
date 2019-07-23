@@ -1,0 +1,86 @@
+.slider {
+  background-color: @bg-grey;
+}
+
+.slider__wrapper {
+  padding-bottom: 30px;
+}
+
+.slider__toggles {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.slider__toggle {
+  cursor: pointer;
+}
+
+.slider__scale {
+  position: relative;
+  width: 82px;
+  height: 12px;
+  border: @b-light;
+  border-radius: 8px;
+  background-color: @bg-white;
+}
+
+.slider__button {
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  width: 36px;
+  height: 6px;
+  border-radius: 5px;
+  background: @bg-green;
+  outline: none;
+  border: none;
+  transition: left 0.5s ease-out;
+}
+
+.slider__image {
+  width: 320px;
+  height: 240px;
+  margin: 0 auto;
+  margin-bottom: 38px;
+
+  &--before {
+    background: url("../img/before-mobile@1x.png") center;
+  }
+
+  &--after {
+    display: none;
+    background: url("../img/after-mobile@1x.png") center;
+  }
+}
+
+.slider__switcher {
+  &--before:checked ~ .slider__wrapper .slider__image--before {
+    display: block;
+  }
+
+  &--before:checked ~ .slider__wrapper .slider__image--after {
+    display: none;
+  }
+
+  &--before:checked ~ .slider__wrapper .slider__button {
+    right: 50%;
+  }
+
+  &--after:checked ~ .slider__wrapper .slider__image--after {
+    display: block;
+  }
+
+  &--after:checked ~ .slider__wrapper .slider__image--before {
+    display: none;
+  }
+
+  &--after:checked ~ .slider__wrapper .slider__button {
+    left: 50%;
+  }
+}
