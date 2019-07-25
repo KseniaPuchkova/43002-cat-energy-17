@@ -104,12 +104,16 @@
 .form__item-input {
   width: 100%;
   height: 46px;
-  padding: 0 35px 0 10px;
+  padding: 0 20px 0 10px;
   font: normal 16px/18px @font-oswald;
   text-transform: uppercase;
   color: @darkgrey;
   border: @b-light;
   outline: none;
+
+  &--padding {
+    padding-right: 45px;
+  }
 
   &::placeholder {
     color: @grey;
@@ -120,7 +124,7 @@
     border: @b-grey;
   }
 
-  &:active {
+  &:focus {
     border: @b-dark;
   }
 
@@ -141,6 +145,30 @@
     height: 12px;
     border-radius: 50%;
     background-color: @bg-green;
+  }
+}
+
+.form__item-label--email {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 33%;
+    right: 17px;
+    width: 18px;
+    height: 16px;
+    background: url("../img/icon-mail.svg") no-repeat;
+  }
+}
+
+.form__item-label--phone {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    right: 11px;
+    width: 23px;
+    height: 23px;
+    background: url("../img/icon-phone.svg") no-repeat;
   }
 }
 
@@ -193,30 +221,6 @@
     border-right: @b-green;
     background-color: @white;
     transform: rotate(45deg);
-  }
-}
-
-.form__item-label--email {
-  &::after {
-    content: "";
-    position: absolute;
-    top: 33%;
-    right: 17px;
-    width: 18px;
-    height: 16px;
-    background: url("../img/icon-mail.svg") no-repeat;
-  }
-}
-
-.form__item-label--phone {
-  &::after {
-    content: "";
-    position: absolute;
-    top: 30%;
-    right: 11px;
-    width: 23px;
-    height: 23px;
-    background: url("../img/icon-phone.svg") no-repeat;
   }
 }
 

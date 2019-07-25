@@ -1,16 +1,18 @@
 .programs {
-  margin-bottom: 40px;
+  margin-bottom: -10px;
 }
 
 .programs__item {
   margin-bottom: 20px;
   padding: 20px;
+  padding-top: 5px;
   background-color: @bg-grey;
 }
 
 .programs__title {
   position: relative;
-  margin-left: 70px;
+  margin-left: 75px;
+  padding-bottom: 5px;
   font: normal 24px/37px @font-oswald;
   text-transform: uppercase;
   text-align: left;
@@ -19,8 +21,8 @@
   &::before {
     content: "";
     position: absolute;
-    left: -70px;
-    bottom: -7px;
+    left: -68px;
+    bottom: -5px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -32,7 +34,7 @@
   content: "";
   position: absolute;
   left: -60px;
-  bottom: -6px;
+  bottom:0;
   width: 50px;
   height: 50px;
   background: url("../img/icon-cat-slim.svg") no-repeat;
@@ -41,15 +43,15 @@
 .programs__title--pro::after {
   content: "";
   position: absolute;
-  left: -77px;
-  bottom: -30px;
+  left: -75px;
+  bottom: -26px;
   width: 65px;
   height: 60px;
   background: url("../img/icon-cat-pro.svg") no-repeat;
 }
 
 .programs__description {
-  padding: 0 0 25px 0;
+  padding: 0 20px 32px 0;
   border-bottom: @b-light;
   font: 500 14px/18px @font-arial;
   text-align: left;
@@ -58,7 +60,7 @@
 
 .programs__link {
   position: relative;
-  padding-right: 20px;
+  padding-right: 50px;
   text-transform: uppercase;
   text-decoration: none;
   color: @black;
@@ -67,17 +69,17 @@
   &::after {
     content: "";
     position: absolute;
-    top: 7px;
-    right: -20px;
+    top: 0.45em;
+    left: 103px;
     width: 25px;
     height: 11px;
-    background: url("../img/icon-right-arrow-long.svg") no-repeat right center;
+    background: url("../img/icon-right-arrow-verylong.svg") no-repeat right center;
+    background-size: 32px 11px;
+    transition: 0.5s ease-in-out;
   }
 
   &:hover::after {
-    right: -28px;
     width: 32px;
-    background: url("../img/icon-right-arrow-verylong.svg") no-repeat right center;
   }
 
   &:active {
