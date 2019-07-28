@@ -3,7 +3,8 @@
 }
 
 .catalog__title {
-  margin: 10px 0 40px;
+  margin-top: 0;
+  margin-bottom: 42px;
 }
 
 .catalog__wrapper {
@@ -11,12 +12,18 @@
 }
 
 .catalog__item-wrapper {
+  position: relative;
   width: 100%;
-  padding-bottom: 23px;
-  border-bottom: @b-light;
+  margin-bottom: 28px;
 
-  &:first-child {
-    border-top: @b-light;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -20px;
+    left: -20px;
+    height: 1px;
+    background: @bg-lightgrey;
   }
 }
 
@@ -32,6 +39,7 @@
 .catalog__image-link {
   display: block;
   flex-shrink: 0;
+  margin-right: 7px;
 }
 
 .catalog__image {
@@ -46,7 +54,7 @@
 
 .catalog__good-title {
   width: 80px;
-  margin: 22px 0 12px 0;
+  margin: 22px 0 17px 0;
   font: normal 16px/20px @font-oswald;
   text-transform: uppercase;
   color: @black;
@@ -54,6 +62,7 @@
 
 .catalog__table {
   width: 100%;
+  margin-bottom: 23px;
   font: normal 12px/16px @font-arial;
   text-align: left;
   color: @grey;

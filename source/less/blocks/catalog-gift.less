@@ -1,15 +1,17 @@
 .catalog-gift {
-  display: block;
   width: 280px;
-  height: 289px;
-  margin: 30px auto;
-  background: @bg-green url("../img/gift-photo-mobile@1x.jpg") center no-repeat;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 35px;
+  background: @bg-green url("../img/gift-photo-mobile@1x.jpg") border-box no-repeat center / 280px 300px;
 }
 
 .catalog-gift__text {
   position: relative;
+  max-width: 70%;
   margin: 0 auto;
-  padding: 187px 40px 60px 40px;
+  padding-top: 195px;
   font: normal 16px/20px @font-arial;
   text-align: center;
   color: @white;
@@ -17,8 +19,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: 65px;
-    left: 40%;
+    top: 70px;
+    left: 37%;
     width: 56px;
     height: 61px;
     background: url("../img/icon-gift.svg") no-repeat center;

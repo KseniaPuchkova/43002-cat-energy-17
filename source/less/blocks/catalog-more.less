@@ -1,10 +1,25 @@
 .catalog-more {
   position: relative;
-  border-bottom: @b-light;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    bottom: 205px;
+    left: -20px;
+    height: 1px;
+    background: @bg-lightgrey;
+  }
+
+  &::after {
+    bottom: -10px;
+  }
 }
 
 .catalog-more__title {
-  margin: 85px 0 -5px 0;
+  margin-top: 108px;
+  margin-bottom: 0;
   font: normal 16px/20px @font-oswald;
   text-align: center;
   text-transform: uppercase;
@@ -14,7 +29,7 @@
 .catalog-more__plus::before {
   content: "";
   position: absolute;
-  top: -50px;
+  top: -55px;
   left: 50%;
   width: 31px;
   height: 31px;
@@ -24,11 +39,11 @@
 }
 
 .catalog-more__text {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font: normal 12px/16px @font-arial;
   text-align: center;
 }
 
 .catalog-more__button {
-  margin-bottom: 20px;
+  margin-bottom: 13px;
 }
