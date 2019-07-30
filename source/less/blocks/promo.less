@@ -1,16 +1,34 @@
 .promo {
   height: 480px;
   margin-bottom: 40px;
-  background: url("../img/index-can-mobile@1x.png") no-repeat 52% 83%, url("../img/index-background-mobile@1x.jpg") no-repeat center 8%, linear-gradient(@bg-lightgreen 66.5%, transparent 36.5%);
+  background: url("../img/index-background-mobile@1x.jpg") no-repeat center 8%, linear-gradient(@bg-lightgreen 66.5%, transparent 36.5%);
+  background-size: 320px auto;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background: url("../img/index-background-mobile@2x.jpg") no-repeat center 8%, linear-gradient(@bg-lightgreen 66.5%, transparent 36.5%);
+    background-size: 320px auto;
+  }
 }
 
 .promo__title {
   margin: 0 auto 23px;
 }
 
+.promo__image-wrapper {
+  width: 100%;
+  margin: auto;
+  margin-top: 35px;
+  text-align: center;
+}
+
+.promo__image {
+  width: 280px;
+  height: 270px;
+}
+
 .promo__button {
   margin: auto;
-  margin-top: 317px;
+  margin-top: 7px;
   font-size: 14px;
   color: @white;
   background-color: @bg-green;

@@ -58,7 +58,6 @@
     padding: 0;
     border: 0;
     background-color: transparent;
-    z-index: 100;
 
     &--nojs {
       display: none;
@@ -73,6 +72,7 @@
     width: 24px;
     height: 2px;
     background-color: @bg-black;
+    transition: background-color 0.3s 0.5s;
 
     &::before,
     &::after {
@@ -82,7 +82,8 @@
       width: 100%;
       height: 2px;
       background-color: @bg-black;
-      transition: 0.2s ease-out 0.4s, transform 0.2s ease-out;
+      transform-origin: 50% 50%;
+      transition: top 0.3s 0.3s, transform 0.3s;
       cursor: pointer;
     }
 
@@ -97,6 +98,7 @@
 
   .main-navigation__toggle--closed span {
     background-color: transparent;
+    transition: background-color 0.3s 0;
 
     &::before,
     &::after {
@@ -107,7 +109,7 @@
       width: 100%;
       height: 2px;
       background-color: @bg-black;
-      transition: 0.2s ease-out, transform 0.2s ease-out 0.4s;
+      transition: top 0.3s, transform 0.3s 0.5s;
     }
 
     &::before {
