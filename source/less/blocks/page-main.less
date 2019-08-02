@@ -28,3 +28,25 @@
     color: @white;
   }
 }
+
+@media (min-width: @width-tablet) {
+  .page-main {
+    min-width: auto;
+    border-top: none;
+  }
+
+  .page-main__title {
+    max-width: 70%;
+    font: 400 60px/60px @font-oswald;
+    text-align: left;
+    color: @black;
+  }
+
+  .page-main__subtitle {
+    width: auto;
+    font: 400 20px/20px @font-oswald;
+    text-align: left;
+    text-transform: uppercase;
+    color: @black;
+  }
+}

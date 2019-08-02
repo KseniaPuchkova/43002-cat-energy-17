@@ -1,5 +1,7 @@
 'use strict';
 
+(function () {
+
 var button = document.querySelector('.main-navigation__toggle');
 var navigation = document.querySelector('.main-navigation__list');
 
@@ -13,3 +15,5 @@ var openNavigation = function (evt) {
 };
 
 button.addEventListener('click', openNavigation);
+
+})();

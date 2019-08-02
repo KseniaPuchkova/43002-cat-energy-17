@@ -24,3 +24,59 @@
   width: 191px;
   height: 38px;
 }
+
+@media (min-width: @width-tablet) {
+  .page-header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: none;
+  }
+
+  .page-header__logo {
+    width: 260px;
+    height: 67px;
+    margin: 0;
+  }
+
+  .page-header__logo-image {
+    width: 173px;
+    height: 58px;
+  }
+}
+
+/* @media (min-width: @width-desktop) {
+  .page-header {
+    min-height: 40px;
+  }
+
+  .page-header__wrapper {
+    max-width: 1300px;
+    padding: 50px 40px 0 40px;
+  }
+
+  .page-header--background {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 695px;
+      margin: 0;
+      background: #63a73a  url("../img/index-background-desktop@1x.jpg") no-repeat center right;
+      z-index: -100;
+    }
+  }
+
+  .page-header__logo-image {
+    width: 202px;
+  }
+}
+*/

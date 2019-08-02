@@ -33,3 +33,74 @@
   color: @white;
   background-color: @bg-green;
 }
+
+
+@media (min-width: @width-tablet) {
+  .promo {
+    width: 768px;
+    height: auto;
+    margin: auto;
+    background: none;
+  }
+
+  .promo__wrapper {
+    position: relative;
+    margin: 0;
+  }
+
+  .promo__title {
+    width: 515px;
+    margin-bottom: 40px;
+    margin-left: 90px;
+  }
+
+  .promo__slogan {
+    margin-bottom: 20px;
+    margin-left: 90px;
+  }
+
+  .promo__image-wrapper {
+    margin-top: 0;
+  }
+
+  .promo__image {
+    width: 709px;
+    height: 609px;
+  }
+
+  .promo__button {
+    position: absolute;
+    top: 30%;
+    left: 120px;
+    width: 228px;
+    margin: 0;
+    padding: 16px 15px;
+    font: 400 20px/20px @font-oswald;
+  }
+}
+
+/*@media (min-width: @width-desktop) {
+  .promo {
+   width: 1180px;
+   height: auto;
+   padding: 95px 0 120px 0;
+   margin: 0 auto;
+   margin-bottom: 146px;
+   background: url("../img/index-can-desktop@1x.png") no-repeat 69% 20px;
+  }
+
+  .promo__wrapper {
+    margin-left: 10px;
+  }
+
+
+  .promo__slogan {
+    margin-bottom: 50px;
+    padding: 0;
+  }
+
+  .promo__button-wrapper {
+    margin-left: 10px;
+    padding: 0;
+  }
+}*/
