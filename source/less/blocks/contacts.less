@@ -3,7 +3,7 @@
 }
 
 .contacts--background {
-  background-color: @bg-grey;
+  background-color: @bg-light;
 }
 
 .contacts__wrapper {
@@ -35,5 +35,85 @@
   width: 100%;
   height: 362px;
   overflow: hidden;
-  background: url("../img/map-pin.png") no-repeat center, url("../img/bg-map-mobile@1x.png") no-repeat center;
+  background: url("../img/map-pin.png") no-repeat center,
+              url("../img/bg-map-mobile@1x.png") no-repeat center;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background: url("../img/map-pin.png") no-repeat center,
+                url("../img/bg-map-mobile@2x.png") no-repeat center;
+  }
+}
+
+@media (min-width: @width-tablet) {
+  .contacts__wrapper {
+    width: 626px;
+    padding: 35px 0;
+    margin: auto;
+  }
+
+  .contacts__slogan {
+    width: 170px;
+    font: normal 20px/25px @font-oswald;
+  }
+
+  .contacts__address {
+    width: 170px;
+  }
+
+  .contacts__address-text {
+    font: 500 16px/20px @font-arial;
+    text-align: right;
+  }
+
+  .contacts__address-text span {
+    display: block;
+    margin-top: 15px;
+  }
+
+  .contacts__map {
+    height: 395px;
+    background: url("../img/map-pin.png") no-repeat center,
+                url("../img/bg-map-tablet@1x.png") no-repeat center;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: url("../img/map-pin.png") no-repeat center,
+                  url("../img/bg-map-tablet@2x.png") no-repeat center;
+    }
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .contacts__container {
+    position: relative;
+    max-width: 1220px;
+    padding: 0 40px;
+    margin: 0 auto;
+  }
+
+  .contacts__wrapper {
+    position: absolute;
+    top: 100px;
+    width: 405px;
+    padding: 36px 90px 34px 85px;
+    background-color: @bg-white;
+  }
+
+  .contacts__slogan {
+    padding: 0;
+  }
+
+  .contacts__address-text {
+    padding: 0;
+    text-align: left;
+  }
+
+  .contacts__map {
+    background: url("../img/map-pin.png") no-repeat center,
+                url("../img/bg-map-desktop@1x.png") no-repeat center;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: url("../img/map-pin.png") no-repeat center,
+                  url("../img/bg-map-desktop@2x.png") no-repeat center;
+    }
+  }
 }

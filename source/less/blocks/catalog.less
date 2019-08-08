@@ -23,7 +23,7 @@
     right: -20px;
     left: -20px;
     height: 1px;
-    background: @bg-lightgrey;
+    background: @bg-grey;
   }
 }
 
@@ -70,10 +70,115 @@
   border-collapse: collapse;
 }
 
-.catalog__cell:nth-child(1n) {
+.catalog__cell:nth-child(n) {
   font-weight: inherit;
 }
 
 .catalog__cell:nth-child(2n) {
   text-align: right;
+}
+
+@media (min-width: @width-tablet) {
+  .catalog {
+    margin-bottom: -40px;
+  }
+
+  .catalog__wrapper {
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  .catalog__title {
+    margin-top: 0;
+    margin-bottom: 60px;
+  }
+
+  .catalog__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .catalog__item-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 30px);
+    min-height: 513px;
+    margin-right: 60px;
+    margin-bottom: 50px;
+    background: linear-gradient(to bottom, @bg-white, @bg-white 92px, @bg-light 92px, @bg-light);
+
+    &::before {
+      content: none;
+    }
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  .catalog__item {
+    flex-direction: column;
+  }
+
+  .catalog__image-link {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    min-height: 215px;
+    margin: 0 auto;
+  }
+
+  .catalog__image {
+    width: 324px;
+    height: auto;
+  }
+
+  .catalog__information {
+    width: auto;
+    flex-basis: 100%;
+    padding: 38px 38px 20px 38px;
+  }
+
+  .catalog__good-title {
+    width: 60%;
+    margin: 0 auto;
+    font: normal 20px/20px @font-oswald;
+    text-align: center;
+  }
+
+  .catalog__table {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 23px;
+    font: normal 16px/16px @font-arial;
+  }
+
+  .catalog__cell:nth-child(n) {
+    padding: 8px 0;
+    border-bottom: @b-light;
+  }
+
+  .catalog__button {
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .catalog__item-wrapper {
+    width: 20%;
+    margin-right: 80px;
+
+    &:nth-child(2n) {
+      margin-right: 80px;
+    }
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
 }

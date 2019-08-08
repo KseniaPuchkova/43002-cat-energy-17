@@ -16,10 +16,6 @@
   &:hover .copyright__image {
     fill: @bg-green;
   }
-
-  &:active .copyright__image {
-    fill: @bg-verylightgreen;
-  }
 }
 
 .copyright__name {
@@ -34,4 +30,11 @@
   fill: @bg-darkgrey;
   transition: 0.4s;
   cursor: pointer;
+}
+
+@media (min-width: @width-tablet) {
+  .copyright__name {
+    margin-top: 5px;
+    margin-right: 10px;
+  }
 }

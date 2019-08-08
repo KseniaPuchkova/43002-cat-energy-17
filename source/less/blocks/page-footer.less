@@ -1,5 +1,5 @@
 .page-footer {
-  background-color: @bg-grey;
+  background-color: @bg-light;
 }
 
 .page-footer__wrapper {
@@ -25,5 +25,19 @@
 
   &:active {
     opacity: 0.6;
+  }
+}
+
+@media (min-width: @width-tablet) {
+  .page-footer__wrapper {
+    flex-direction: row;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .page-footer__logo {
+    margin: 0;
+    padding: 0;
   }
 }

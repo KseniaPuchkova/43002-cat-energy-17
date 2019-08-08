@@ -29,38 +29,44 @@
 .promo__button {
   margin: auto;
   margin-top: 7px;
-  font-size: 14px;
-  color: @white;
-  background-color: @bg-green;
 }
 
 
 @media (min-width: @width-tablet) {
   .promo {
     width: 768px;
-    height: auto;
+    min-height: 750px;
     margin: auto;
+    margin-bottom: 60px;
     background: none;
   }
 
   .promo__wrapper {
     position: relative;
     margin: 0;
+    margin-left: 90px;
   }
 
   .promo__title {
     width: 515px;
+    margin: 0;
     margin-bottom: 40px;
-    margin-left: 90px;
   }
 
   .promo__slogan {
     margin-bottom: 20px;
-    margin-left: 90px;
   }
 
   .promo__image-wrapper {
-    margin-top: 0;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: auto;
+    margin-top: 110px;
+    margin-left: -50px;
+    margin-bottom: 100px;
+    text-align: center;
+    z-index: -100;
   }
 
   .promo__image {
@@ -69,38 +75,49 @@
   }
 
   .promo__button {
-    position: absolute;
-    top: 30%;
-    left: 120px;
     width: 228px;
     margin: 0;
+    margin-top: 40px;
     padding: 16px 15px;
-    font: 400 20px/20px @font-oswald;
+    font-size: 20px;
   }
 }
 
-/*@media (min-width: @width-desktop) {
+@media (min-width: @width-desktop) {
   .promo {
-   width: 1180px;
-   height: auto;
-   padding: 95px 0 120px 0;
+   width: auto;
+   min-height: auto;
    margin: 0 auto;
-   margin-bottom: 146px;
-   background: url("../img/index-can-desktop@1x.png") no-repeat 69% 20px;
+   margin-bottom: 180px;
   }
 
   .promo__wrapper {
-    margin-left: 10px;
+    margin: 0 auto;
+    padding-top: 95px;
   }
 
+  .promo__title {
+    margin-left: 90px;
+  }
 
   .promo__slogan {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    margin-left: 90px;
     padding: 0;
   }
 
-  .promo__button-wrapper {
-    margin-left: 10px;
-    padding: 0;
+  .promo__image-wrapper {
+    top: 8%;
+    left: 38%;
+    margin: 0;
   }
-}*/
+
+  .promo__image {
+    width: 552px;
+    height: 499px;
+  }
+
+  .promo__button {
+    margin-left: 90px;
+  }
+}

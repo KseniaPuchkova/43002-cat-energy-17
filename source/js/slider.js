@@ -3,6 +3,8 @@
 (function () {
 
 var TABLET_WIDTH = 768;
+var scale = document.querySelector('.slider__scale');
+var button = scale.querySelector('.slider__button');
 
 if (document.body.clientWidth >= TABLET_WIDTH) {
   var initSlider = function (callback) {
@@ -10,21 +12,18 @@ if (document.body.clientWidth >= TABLET_WIDTH) {
       MIN: 0,
       MAX: 100
     };
-    var sliderScale = document.querySelector('.slider__scale');
-    var sliderButton = sliderScale.querySelector('.slider__button');
     var effectLevel;
 
     var movePinHandler = function (downEvt) {
-
-       downEvt.preventDefault();
+      downEvt.preventDefault();
 
       var mouseMoveHandler = function (moveEvt) {
         moveEvt.preventDefault();
-        var shiftCoordX = moveEvt.clientX - sliderScale.getBoundingClientRect().left;
-        var currentCoordPin = Math.round(shiftCoordX * Coord.MAX / sliderScale.getBoundingClientRect().width);
+        var shiftCoordX = moveEvt.clientX - scale.getBoundingClientRect().left;
+        var currentCoordPin = Math.round(shiftCoordX * Coord.MAX / scale.getBoundingClientRect().width);
 
         if (currentCoordPin >= Coord.MIN && currentCoordPin <= Coord.MAX) {
-          sliderButton.style.left = currentCoordPin + '%';
+          button.style.left = currentCoordPin + '%';
           effectLevel = currentCoordPin;
         }
         callback(effectLevel);
@@ -40,10 +39,15 @@ if (document.body.clientWidth >= TABLET_WIDTH) {
       document.addEventListener('mouseup', mouseUpHandler);
     };
 
-    sliderButton.addEventListener('mousedown', movePinHandler);
+   button.addEventListener('mousedown', movePinHandler);
   };
 
   initSlider(window.toggle.setWidth);
 }
+
+window.slider = {
+  scale: scale,
+  button: button
+};
 
 })();

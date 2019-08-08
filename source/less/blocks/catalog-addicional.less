@@ -2,6 +2,10 @@
   overflow: hidden;
 }
 
+.catalog-addicional__wrapper {
+  max-width: 100%;
+}
+
 .catalog-addicional__title {
   position: relative;
   max-width: 230px;
@@ -15,10 +19,6 @@
   &::after {
     .green-line();
   }
-}
-
-.catalog-addicional__wrapper {
-  max-width: 100%;
 }
 
 .catalog-addicional__list {
@@ -37,7 +37,7 @@
 .catalog-addicional__good-title {
   margin-bottom: 10px;
   font: normal 16px/16px @font-oswald;
-  color: @darkgrey;
+  color: @darkbrown;
   text-align: left;
   text-transform: uppercase;
 }
@@ -47,11 +47,118 @@
   margin-bottom: 15px;
   font: normal 14px/18px @font-arial;
   text-align: left;
-  color: #444444;
+  color: @grey;
   border-spacing: 0 2px;
   border-collapse: collapse;
 }
 
 .catalog-addicional__cell:nth-child(2n) {
   text-align: right;
+}
+
+@media (min-width: @width-tablet) {
+  .catalog-addicional__wrapper {
+    max-width: 708px;
+  }
+
+  .catalog-addicional__title {
+    max-width: 340px;
+    padding-right: 37px;
+    padding-left: 37px;
+    margin-bottom: 70px;
+    font: normal 36px/36px @font-oswald;
+
+    &::before {
+     .green-line();
+      right: 100%;
+    }
+  }
+
+  .catalog-addicional__item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-right: 38px;
+    padding-bottom: 19px;
+    padding-left: 38px;
+    border-right: @b-light;
+    border-bottom: @b-light;
+    border-left: @b-light;
+
+    &:first-child {
+      border-top: @b-light;
+    }
+  }
+
+  .catalog-addicional__good-title {
+    width: 50%;
+    margin-top: 30px;
+    font: normal 20px/20px @font-oswald;
+  }
+
+  .catalog-addicional__table {
+    width: 50%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    font: normal 16px/20px @font-arial;
+    text-align: right;
+    color: @grey;
+  }
+
+  .catalog-addicional__cell:nth-child(2n) {
+    width: 30%;
+    text-align: right;
+  }
+
+  .catalog-addicional__button {
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .catalog-addicional__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1220px;
+  }
+
+  .catalog-addicional__title {
+    padding-right: 40px;
+    padding-left: 40px;
+    margin-left: -40px;
+  }
+
+  .catalog-addicional__item {
+    width: 895px;
+    padding: 0;
+    border-right: none;
+    border-left: none;
+  }
+
+  .catalog-addicional__good-title {
+    width: 36%;
+    margin-top: 26px;
+    font: normal 20px/20px @font-oswald;
+  }
+
+  .catalog-addicional__table {
+    width: 36%;
+    margin-top: 26px;
+    margin-bottom: 26px;
+  }
+
+  .catalog-addicional__cell:nth-child(n) {
+    text-align: left;
+  }
+
+  .catalog-addicional__cell:nth-child(2n) {
+    width: 20%;
+  }
+
+  .catalog-addicional__button {
+    width: 28%;
+    margin: 15px 0;
+  }
 }

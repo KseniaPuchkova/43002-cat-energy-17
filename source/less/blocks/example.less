@@ -1,5 +1,5 @@
 .example {
-  background: @bg-grey;
+  background: @bg-light;
 }
 
 .example__wrapper {
@@ -52,12 +52,12 @@
 
 .example__text {
   max-width: 80px;
-  padding: 0 10px;
   margin: 0 auto;
+  padding: 0 10px;
   font: normal 12px/12px @font-arial;
   text-align: center;
   color: @black;
-  background-color: @bg-grey;
+  background-color: @bg-light;
   transform: translateY(-10px);
 }
 
@@ -76,9 +76,7 @@
   }
 
   .example__wrapper {
-    margin: 0 auto;
     margin-bottom: 40px;
-    padding: 0 30px;
   }
 
   .example__title {
@@ -98,6 +96,7 @@
 
   .example__table-wrapper {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
 
@@ -125,41 +124,50 @@
     padding-left: 147px;
     font: normal 20px/24px @font-oswald;
     text-align: right;
+  }
 
-    & span {
-      display: block;
-      margin-top: 5px;
-    }
+  .example__information span {
+    display: block;
+    margin-top: 5px;
   }
 }
 
-/*@media (min-width: @width-desktop) {
+@media (min-width: @width-desktop) {
   .example {
-    background: linear-gradient(to bottom, #ffffff, #ffffff 15%, transparent 15%, transparent), linear-gradient(to right, #f2f2f2, #f2f2f2 calc(100% - 150px), #eaeaea calc(100% - 150px), #eaeaea);
+    background: linear-gradient(to bottom, @bg-white, @bg-white 25%, transparent 25%, transparent), linear-gradient(to right, @bg-light, @bg-light 50%, @bg-lightgrey 50%, @bg-lightgrey);
     border-top: none;
   }
-  .example__wrapper-flex {
+
+  .example__container {
     display: flex;
-    justify-content: space-between;
     max-width: 1220px;
     margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .example__wrapper {
     width: 50%;
-    margin: 0 auto;
     padding: 0;
+    margin-bottom: 40px;
     background-color: transparent;
   }
 
   .example__title {
-    margin: -50px 0 150px 0;
+    margin-bottom: 70px;
+  }
+
+  .example__description-wrapper {
+    margin: 0;
+    padding: 0;
   }
 
   .example__description {
-    max-width: 450px;
-    padding: 0 50px 0 0;
-    margin-bottom: 70px;
+    width: 450px;
+    margin: 0;
+    padding: 0;
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
 
   .example__table-wrapper {
@@ -168,24 +176,24 @@
   }
 
   .example__table {
-    margin-top: -5px;
-    padding-bottom: 60px;
+    margin-bottom: 50px;
   }
 
   .example__text {
-    background-color: @background-color-grey;
+    background-color: @bg-light;
   }
 
   .example__information {
     align-self: flex-start;
-    width: 100%;
-    margin: 60px 0;
-    font: 400 20px/24px @font-oswald;
+    margin: 0;
+    padding: 0;
+    font: normal 20px/24px @font-oswald;
     text-align: left;
   }
 
   .example__information span {
+    display: inline-block;
+    vertical-align: baseline;
     margin-left: 60px;
   }
  }
-*/

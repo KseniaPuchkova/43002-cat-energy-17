@@ -6,7 +6,7 @@
   margin-bottom: 20px;
   padding: 20px;
   padding-top: 8px;
-  background-color: @bg-grey;
+  background-color: @bg-light;
 }
 
 .programs__title {
@@ -16,7 +16,7 @@
   font: normal 24px/37px @font-oswald;
   text-transform: uppercase;
   text-align: left;
-  color: @darkgrey;
+  color: @darkbrown;
 
   &::before {
     content: "";
@@ -65,7 +65,7 @@
   text-transform: uppercase;
   text-decoration: none;
   color: @black;
-  background-color: @bg-grey;
+  background-color: @bg-light;
 
   &::after {
     content: "";
@@ -87,6 +87,7 @@
     opacity: 0.3;
   }
 }
+
 @media (min-width: @width-tablet) {
   .programs {
     margin-bottom: 0;
@@ -126,7 +127,7 @@
     height: 195px;
   }
 
-  .programs__title--pro::after{
+  .programs__title--pro::after {
     left: 375px;
     bottom: -130px;
     width: 255px;
@@ -150,10 +151,10 @@
   }
 }
 
-/*@media (min-width: @width-desktop) {
+@media (min-width: @width-desktop) {
   .programs {
-    max-width: 1220px;
     margin: 0 auto;
+    margin-bottom: 70px;
   }
 
   .programs__wrapper {
@@ -173,35 +174,38 @@
   }
 
   .programs__title {
-    margin-bottom: 75px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font: 400 36px/37px @font-oswald;
     text-align: center;
 
     &::before {
-      left: 0px;
-      bottom: -35px;
+      left: 0;
       width: 100px;
       height: 100px;
     }
   }
 
   .programs__title--slim::after {
-    left: 20px;
-    bottom: -50px;
+    left: 18px;
+    bottom: -5px;
     width: 70px;
     height: 100px;
   }
 
   .programs__title--pro::after{
     left: -20px;
-    bottom: -25px;
+    bottom: 10px;
     width: 135px;
     height: 55px;
   }
 
   .programs__description {
     width: 480px;
-    margin-bottom: 7px;
+    margin-bottom: 25px;
   }
 
   .programs__link {
@@ -212,4 +216,3 @@
     }
   }
 }
-*/

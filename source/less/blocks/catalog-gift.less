@@ -1,32 +1,84 @@
 .catalog-gift {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 280px;
   height: 300px;
-  margin: 0 auto;
-  margin-top: 40px;
-  margin-bottom: 35px;
+  margin: 40px auto 35px;
   background: @bg-green url("../img/gift-photo-mobile@1x.jpg") border-box no-repeat center / 280px 289px;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background: url("../img/gift-photo-mobile@2x.jpg") border-box no-repeat center / 280px 289px;
   }
-}
-
-.catalog-gift__text {
-  position: relative;
-  max-width: 70%;
-  margin: 0 auto;
-  padding-top: 195px;
-  font: normal 16px/20px @font-arial;
-  text-align: center;
-  color: @white;
 
   &::before {
     content: "";
-    position: absolute;
-    top: 70px;
-    left: 37%;
     width: 56px;
     height: 61px;
+    margin-top: 70px;
     background: url("../img/icon-gift.svg") no-repeat center;
+  }
+}
+
+.catalog-gift__text {
+  max-width: 70%;
+  padding-top: 40px;
+  font: normal 16px/20px @font-arial;
+  text-align: center;
+  color: @white;
+}
+
+@media (min-width: @width-tablet) {
+  .catalog-gift {
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    height: 200px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    background: @bg-green url("../img/gift-photo-tablet@1x.jpg") border-box no-repeat center / cover;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: url("../img/gift-photo-tablet@2x.jpg") border-box no-repeat center / cover;
+    }
+
+    &::before {
+      margin-top: 0;
+      margin-right: 280px;
+      margin-left: 90px;
+    }
+  }
+
+  .catalog-gift__text {
+    max-width: 25%;
+    margin: 0;
+    padding-top: 0;
+    font: normal 16px/20px @font-arial;
+    text-align: left;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .catalog-gift {
+    flex-direction: column;
+    width: 245px;
+    height: 290px;
+    margin-top: 0;
+    background: @bg-green url("../img/gift-photo-desktop@1x.jpg") border-box no-repeat center / cover;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: url("../img/gift-photo-desktop@2x.jpg") border-box no-repeat center / cover;
+    }
+
+    &::before {
+      margin: 0;
+      margin-top: 25%;
+    }
+  }
+
+  .catalog-gift__text {
+    max-width: 70%;
+    margin-top: 25%;
+    text-align: center;
   }
 }
