@@ -39,7 +39,7 @@ if (document.body.clientWidth >= TABLET_WIDTH) {
       document.addEventListener('mouseup', mouseUpHandler);
     };
 
-   button.addEventListener('mousedown', movePinHandler);
+    button.addEventListener('mousedown', movePinHandler);
   };
 
   initSlider(window.toggle.setWidth);

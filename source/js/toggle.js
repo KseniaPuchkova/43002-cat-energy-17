@@ -20,17 +20,17 @@
       window.slider.button.style.left = "0%";
     };
 
-     var buttonAfterHandler = function () {
-       imageBefore.style.clip = "rect(0, 0, auto, 0)";
-       imageAfter.style.clip = "rect(0, auto, auto, 0)";
-       window.slider.button.style.left = "100%";
-      };
+    var buttonAfterHandler = function () {
+      imageBefore.style.clip = "rect(0, 0, auto, 0)";
+      imageAfter.style.clip = "rect(0, auto, auto, 0)";
+      window.slider.button.style.left = "100%";
+    };
 
-      var setWidth = function (effectLevel) {
-       var value = ImageWidth.MAX - (effectLevel * ImageWidth.MAX / 100);
-       imageBefore.style.clip = "rect(0," + value + "px" + ", auto, 0)";
-       imageAfter.style.clip = "rect(0, auto, auto," + value + "px" + ")";
-      };
+    var setWidth = function (effectLevel) {
+      var value = ImageWidth.MAX - (effectLevel * ImageWidth.MAX / 100);
+      imageBefore.style.clip = "rect(0," + value + "px" + ", auto, 0)";
+      imageAfter.style.clip = "rect(0, auto, auto," + value + "px" + ")";
+    };
 
     toggleBefore.addEventListener('click', buttonBeforeHandler);
     toggleAfter.addEventListener('click', buttonAfterHandler);
