@@ -56,7 +56,7 @@
 }
 
 .form__label {
-  display: inline-block;
+  display: block;
   flex-shrink: 0;
   margin-right: 15px;
   padding-top: 7px;
@@ -70,7 +70,9 @@
 
   &--radio {
     position: relative;
-    display: inline-block;
+    width: 235px;
+    margin-top: 5px;
+    margin-bottom: -15px;
     padding-left: 45px;
 
     &::before {
@@ -96,7 +98,7 @@
 
   &--checkbox {
     position: relative;
-    display: inline-block;
+    width: 160px;
     padding-left: 45px;
 
     &::before {
@@ -166,15 +168,14 @@
       left: 11px;
       width: 9px;
       height: 18px;
-      border-bottom: @b-green;
       border-right: @b-green;
+      border-bottom: @b-green;
       background-color: @white;
       transform: rotate(45deg);
     }
   }
 
   &--textarea {
-    box-sizing: border-box;
     height: 154px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -222,18 +223,12 @@
   }
 }
 
-.form__input:hover + .form__icon--email {
-  fill: @bg-green;
-}
-
+.form__input:hover + .form__icon--email,
 .form__input:hover + .form__icon--phone {
   fill: @bg-green;
 }
 
-.form__input:focus:invalid + .form__icon--email {
-  fill: @bg-pink;
-}
-
+.form__input:focus:invalid + .form__icon--email,
 .form__input:focus:invalid + .form__icon--phone {
   fill: @bg-pink;
 }
@@ -410,12 +405,6 @@
     margin-bottom: 60px;
   }
 
-  .form__item-title {
-    margin-left: -40px;
-    padding-right: 40px;
-    padding-left: 40px;
-  }
-
   .form__fields {
     display: flex;
     flex-direction: row;
@@ -431,6 +420,12 @@
       flex-direction: row;
       justify-content: space-between;
     }
+  }
+
+  .form__item-title {
+    margin-left: -40px;
+    padding-right: 40px;
+    padding-left: 40px;
   }
 
   .form__item {
@@ -449,30 +444,30 @@
       padding-top: 25px;
     }
 
-    &:nth-child(1){
+    &:nth-child(1) {
       width: 570px;
       margin-right: 80px;
     }
 
-    &:nth-child(2){
-      width: 570px;
+    &:nth-child(2) {
+     width: 570px;
     }
   }
 
   .form__item-content {
     margin-bottom: 20px;
 
+    &--width {
+      width: 570px;
+    }
+
     &--margin {
       width: 20%;
       margin-right: 80px;
 
-      &:nth-child(4){
+      &:nth-child(4n) {
         margin-right: 0;
       }
-    }
-
-    &--width {
-      width: 570px;
     }
   }
 
