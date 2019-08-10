@@ -1,0 +1,19 @@
+.page-main {
+  min-width: 320px;
+  border-top: @b-light;
+  overflow: hidden;
+}
+
+@media (min-width: @width-tablet) {
+  .page-main {
+    min-width: 708px;
+    border-top: none;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .page-main {
+    min-width: 1220px;
+    max-width: 100%;
+  }
+}

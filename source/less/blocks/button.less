@@ -1,0 +1,36 @@
+.button {
+  display: block;
+  vertical-align: top;
+  width: 100%;
+  padding: 10px 0;
+  font: normal 16px/20px @font-oswald;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: @white;
+  background-color: @bg-green;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s;
+
+  &:hover {
+    background-color: @bg-darkgreen;
+  }
+
+  &:active {
+    color: @lightgreen;
+  }
+
+  &--color {
+    background-color: @bg-light;
+    color: @grey;
+
+    &:hover {
+      background-color: @bg-grey;
+    }
+
+    &:active {
+      color: @lightgrey;
+    }
+  }
+}

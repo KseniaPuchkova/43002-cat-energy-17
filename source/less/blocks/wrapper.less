@@ -1,0 +1,34 @@
+.wrapper {
+  max-width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: @width-tablet) {
+  .wrapper {
+    width: 708px;
+    max-width: none;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .wrapper--responsive {
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .wrapper {
+    width: 1220px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .wrapper--responsive {
+    width: auto;
+    max-width: 1220px;
+  }
+}
