@@ -46,13 +46,13 @@
   <main class="page-main">
     <section class="promo">
       <div class="promo__wrapper wrapper">
-        <h1 class="promo__title page-main__title title">Функциональное питание для котов</h1>
-        <p class="promo__slogan page-main__subtitle title__addicional">Занялся собой? Займись котом!</p>
+        <h1 class="promo__title title title--color">Функциональное питание для котов</h1>
+        <p class="promo__slogan title__addicional title__addicional--color">Занялся собой? Займись котом!</p>
         <figure class="promo__image-wrapper">
           <picture>
             <source type="image/webp" media="(min-width: 1300px)" srcset="img/index-can-desktop.webp 1x, img/index-can-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet.webp 1x, img/index-can-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/index-can-mobile.webp 1x, img/index-can-mobile@2x.webp 2x">
+            <source type="image/webp" srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x">
             <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
             <img class="promo__image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Банка с едой для кошек">
@@ -125,7 +125,7 @@
                 <picture>
                   <source type="image/webp" media="(min-width: 1300px)" srcset="img/before-desktop.webp 1x, img/before-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet.webp 1x, img/before-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/before-mobile.webp 1x, img/before-mobile@2x.webp 2x">
+                  <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
                   <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
                   <img class="slider__image" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Полный кот">
@@ -136,7 +136,7 @@
                 <picture>
                   <source type="image/webp" media="(min-width: 1300px)" srcset="img/after-desktop.webp 1x, img/after-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet.webp 1x, img/after-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/after-mobile.webp 1x, img/after-mobile@2x.webp 2x">
+                  <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
                   <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
                   <img class="slider__image" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Худой кот">
@@ -165,9 +165,7 @@
           </address>
         </div>
       </div>
-      <div class="contacts__map">
-        <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123688!2d30.320894615651014!3d59.93879686904841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1523735281602" style="border:0" width="100%" height="400" allowfullscreen></iframe>
-      </div>
+      <div class="contacts__map" id="map" width="100%" height="400"></div>
     </section>
   </main>
   <footer class="page-footer">
@@ -219,5 +217,8 @@
   <script src="js/slider.js"></script>
   <script src="js/svg4everybody.min.js"></script>
   <script src="js/svgxuse.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=1fb8eda5-a887-4404-86ce-509908bca748"></script>
+  <script src="js/map.js"></script>
+  </script>
 </body>
 </html>
