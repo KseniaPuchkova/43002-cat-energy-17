@@ -33,47 +33,29 @@
     width: 60px;
     height: 60px;
     margin-right: 20px;
-    background: @bg-green center no-repeat;
+    background: @bg-green url("../img/sprite@1x.png") center no-repeat;
+    background-size: 260px 50px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: @bg-green url("../img/sprite@2x.png") center no-repeat;
+      background-size: 260px 50px;
+    }
   }
 
   &--leaf::before {
-    background-image: url("../img/advantage-leaf@1x.png");
-    background-size: 50px;
-
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/advantage-leaf@2x.png");
-      background-size: 50px;
-    }
+    background-position: -132px 5px;
   }
 
-  &--powder::before {
-    background-image: url("../img/advantage-powder@1x.png");
-    background-size: 50px;
-
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/advantage-powder@2x.png");
-      background-size: 50px;
-    }
+  &--powder::before  {
+    background-position: -204px 5px;
   }
 
   &--dining::before {
-    background-image: url("../img/advantage-dining@1x.png");
-    background-size: 50px;
-
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/advantage-dining@2x.png");
-      background-size: 50px;
-    }
+    background-position: -67px 5px;
   }
 
   &--clock::before {
-    background-image: url("../img/advantage-clock@1x.png");
-    background-size: 50px;
-
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/advantage-clock@2x.png");
-      background-size: 50px;
-    }
+    background-position: 5px 5px;
   }
 }
 
@@ -120,6 +102,22 @@
       height: 80px;
       margin-right: 0;
       margin-bottom: 35px;
+    }
+
+    &--leaf::before {
+      background-position: -123px 15px;
+    }
+
+    &--powder::before  {
+      background-position: -194px 15px;
+    }
+
+    &--dining::before {
+      background-position: -56px 15px;
+    }
+
+    &--clock::before {
+      background-position: 13px 15px;
     }
 
     &::after {
