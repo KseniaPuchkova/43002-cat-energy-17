@@ -16,7 +16,7 @@
 </head>
 <body>
   <header class="page-header">
-    <div class="page-header__wrapper wrapper wrapper--responsive">
+    <div class="page-header__container container">
       <a class="page-header__logo" href="index.html">
         <picture>
           <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
@@ -45,7 +45,7 @@
   </header>
   <main class="page-main">
     <section class="catalog">
-      <div class="catalog__wrapper wrapper">
+      <div class="catalog__container container container--fix">
         <h1 class="catalog__title title">Каталог продукции</h1>
         <ul class="catalog__list">
           <li class="catalog__item-wrapper">
@@ -283,7 +283,7 @@
       </div>
     </section>
     <section class="catalog-addicional">
-      <div class="catalog-addicional__wrapper wrapper">
+      <div class="catalog-addicional__container container container--fix">
         <h2 class="catalog-addicional__title">Дополнительные товары</h2>
         <ul class="catalog-addicional__list">
           <li class="catalog-addicional__item">
@@ -328,13 +328,13 @@
           </li>
         </ul>
         <div class="catalog-gift" href="#">
-          <p class="catalog-gift__text">Закажите все<br> и получите чехол для кота в подарок!</p>
+          <p class="catalog-gift__text">Закажите все<br>и получите чехол для кота в подарок!</p>
         </div>
       </div>
     </section>
     <section class="contacts contacts--background">
-      <div class="contacts__container">
-        <div class="contacts__wrapper wrapper">
+      <div class="contacts__wrapper">
+        <div class="contacts__container container">
           <h2 class="visually-hidden">Контакты</h2>
           <p class="contacts__slogan">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
           <address class="contacts__address">
@@ -342,13 +342,11 @@
           </address>
         </div>
       </div>
-      <div class="contacts__map">
-        <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123688!2d30.320894615651014!3d59.93879686904841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1523735281602" style="border:0" width="100%" height="400" allowfullscreen></iframe>
-      </div>
+      <div class="contacts__map" id="map" width="100%" height="400"></div>
     </section>
   </main>
   <footer class="page-footer">
-    <div class="page-footer__wrapper wrapper wrapper--responsive">
+    <div class="page-footer__container container">
       <a class="page-footer__logo" href="index.html">
         <img class="page-footer__logo-image" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
       </a>
@@ -395,5 +393,7 @@
   <script src="js/picturefill.min.js"></script>
   <script src="js/svg4everybody.min.js"></script>
   <script src="js/svgxuse.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=1fb8eda5-a887-4404-86ce-509908bca748"></script>
+  <script src="js/map.js"></script>
 </body>
 </html>

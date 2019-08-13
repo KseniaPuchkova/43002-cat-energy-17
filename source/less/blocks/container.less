@@ -1,4 +1,4 @@
-.wrapper {
+.container {
   max-width: 100%;
   padding-left: 20px;
   padding-right: 20px;
@@ -7,28 +7,24 @@
 }
 
 @media (min-width: @width-tablet) {
-  .wrapper {
-    width: 708px;
-    max-width: none;
+  .container {
     padding-left: 30px;
     padding-right: 30px;
   }
 
-  .wrapper--responsive {
-    width: auto;
-    max-width: 100%;
+  .container--fix {
+    width: 708px;
   }
 }
 
 @media (min-width: @width-desktop) {
-  .wrapper {
-    width: 1220px;
+  .container {
+    max-width: 1220px;
     padding-left: 40px;
     padding-right: 40px;
   }
 
-  .wrapper--responsive {
-    width: auto;
-    max-width: 1220px;
+  .container--fix {
+    width: 1220px;
   }
 }
