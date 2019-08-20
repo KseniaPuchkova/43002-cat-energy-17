@@ -14,11 +14,11 @@
 }
 
 .main-navigation__item {
-  padding: 24px 20px;
   margin-left: -20px;
   margin-right: -20px;
-  text-align: center;
+  padding: 24px 20px;
   border-top: @b-light;
+  text-align: center;
 }
 
 .main-navigation__item-link {
@@ -26,7 +26,7 @@
   font: bold 20px/20px @font-oswald;
   text-transform: uppercase;
   color: @black;
-  transition: 0.4s;
+  transition: 0.3s;
 
   &:hover {
     opacity: 0.6;
@@ -36,11 +36,8 @@
     opacity: 0.3;
   }
 
-  &--active {
-    &:hover,
-    &:active {
-      opacity: 1;
-    }
+  &:not([href]) {
+    opacity: 1;
   }
 }
 
@@ -48,12 +45,10 @@
   .main-navigation__toggle {
     position: absolute;
     display: block;
-    top: 8px;
+    top: 6px;
     right: 21px;
     width: 26px;
     height: 26px;
-    margin: 0;
-    padding: 0;
     border: 0;
     background-color: transparent;
 
@@ -70,7 +65,7 @@
     width: 24px;
     height: 2px;
     background-color: @bg-black;
-    transition: background-color 0.3s 0.5s;
+    transition: background-color 0.3s 0.3s;
 
     &::before,
     &::after {
@@ -120,10 +115,10 @@
   }
 }
 
-
 @media (min-width: @width-tablet) {
   .main-navigation {
     margin: 0;
+    padding-bottom: 30px;
   }
 
   .main-navigation__list {
@@ -133,25 +128,29 @@
     justify-content: flex-end;
     flex-wrap: wrap;
     flex-shrink: 0;
+    max-width: 100%;
   }
 
   .main-navigation__item {
-    margin-right: 39px;
+    margin-right: 34px;
     margin-left: 0;
     padding: 0;
     border-top: none;
 
     &:last-child {
       margin-right: 0;
+      border-bottom: none;
     }
   }
 
   .main-navigation__item-link {
-    padding-bottom: 5px;
-    font: 400 18px/25px @font-oswald;
+    padding-top: 10px;
+    padding-bottom: 6px;
+    border-bottom: @b-transparent;
+    font: normal 18px/25px @font-oswald;
 
-    &--active {
-      border-bottom: @b-green;
+    &:not([href]) {
+      border-bottom-color: @bg-green;
     }
   }
 
@@ -161,30 +160,25 @@
 }
 
 @media (min-width: @width-desktop) {
+  .main-navigation--color .main-navigation__item-link {
+    color: @white;
+
+    &:not([href]) {
+      border-bottom-color: @bg-white;
+    }
+  }
+
   .main-navigation__list {
     max-width: 570px;
   }
 
   .main-navigation__item {
     margin: 0;
-    margin-left: 37px;
-    padding: 16px 0 8px 0;
+    margin-left: 34px;
+    padding: 16px 0 10px;
   }
 
   .main-navigation__item-link {
-    font: normal 20px/25px @font-oswald;
-    color: @black;
-
-    &--active {
-      border-bottom: @b-green;
-    }
-
-    &--color {
-      color: @white;
-
-      &--active {
-        border-bottom: @b-white;
-      }
-    }
+    font-size: 20px;
   }
 }

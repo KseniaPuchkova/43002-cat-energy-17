@@ -9,7 +9,6 @@
   margin-top: 14px;
   margin-bottom: 15px;
   margin-left: 2px;
-  cursor: pointer;
 
   &:hover {
     opacity: 0.8;
@@ -34,17 +33,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-shrink: 0;
-    margin: auto;
-    padding-top: 20px;
+    padding-top: 24px;
     padding-bottom: 20px;
     border: none;
   }
 
   .page-header__logo {
-    width: 260px;
-    height: 67px;
+    flex-shrink: 0;
+    width: 268px;
+    height: 58px;
     margin: 0;
+    padding-bottom: 30px;
   }
 
   .page-header__logo-image {
@@ -55,7 +54,7 @@
 
 @media (min-width: @width-desktop) {
   .page-header__container {
-    padding: 55px 40px 0 40px;
+    padding: 49px 40px 0 40px;
   }
 
   .page-header--background {
@@ -76,6 +75,10 @@
         background: @bg-lightgreen url("../img/index-background-desktop@2x.jpg") no-repeat center right / cover;
       }
     }
+  }
+
+  .page-header__logo {
+    margin-right: 440px;
   }
 
   .page-header__logo-image {

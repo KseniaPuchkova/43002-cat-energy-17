@@ -2,27 +2,33 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 280px;
-  height: 300px;
-  margin: 40px auto 35px;
-  background: @bg-green url("../img/gift-photo-mobile@1x.jpg") border-box no-repeat center / 280px 289px;
+  width: 180px;
+  min-height: 199px;
+  margin: 36px auto;
+  padding: 45px 50px;
+  background: @bg-green url("../img/gift-photo-mobile@1x.jpg") border-box no-repeat center / 280px 293px;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    background: url("../img/gift-photo-mobile@2x.jpg") border-box no-repeat center / 280px 289px;
+    background: url("../img/gift-photo-mobile@2x.jpg") border-box no-repeat center / 280px 293px;
   }
 
   &::before {
+    flex-shrink: 0;
     content: "";
+    position: static;
+    display: block;
     width: 56px;
     height: 61px;
-    margin-top: 70px;
-    background: url("../img/icon-gift.svg") no-repeat center;
+    margin-top: 15px;
+    background: url("../img/icon-gift.svg") no-repeat center / 56px 61px;
+    z-index: 100;
   }
 }
 
 .catalog-gift__text {
-  max-width: 70%;
-  padding-top: 40px;
+  width: 180px;
+  margin-top: 62px;
+  margin-bottom: 0;
   font: normal 16px/20px @font-arial;
   text-align: center;
   color: @white;
@@ -32,10 +38,11 @@
   .catalog-gift {
     flex-direction: row;
     justify-content: flex-start;
-    width: 100%;
-    height: 200px;
+    width: 528px;
+    min-height: 60px;
     margin-top: 70px;
-    margin-bottom: 70px;
+    margin-bottom: 75px;
+    padding: 70px 90px;
     background: @bg-green url("../img/gift-photo-tablet@1x.jpg") border-box no-repeat center / cover;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -45,14 +52,11 @@
     &::before {
       margin-top: 0;
       margin-right: 280px;
-      margin-left: 90px;
     }
   }
 
   .catalog-gift__text {
-    max-width: 25%;
     margin: 0;
-    padding-top: 0;
     font: normal 16px/20px @font-arial;
     text-align: left;
   }
@@ -61,9 +65,11 @@
 @media (min-width: @width-desktop) {
   .catalog-gift {
     flex-direction: column;
-    width: 245px;
-    height: 290px;
-    margin-top: 0;
+    width: 185px;
+    min-height: 243px;
+    margin: auto;
+    margin-right: 0;
+    padding: 25px 30px;
     background: @bg-green url("../img/gift-photo-desktop@1x.jpg") border-box no-repeat center / cover;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -71,14 +77,13 @@
     }
 
     &::before {
-      margin: 0;
-      margin-top: 25%;
+      margin-right: 0;
+      margin-top: 35px;
     }
   }
 
   .catalog-gift__text {
-    max-width: 70%;
-    margin-top: 25%;
+    margin-top: 65px;
     text-align: center;
   }
 }
