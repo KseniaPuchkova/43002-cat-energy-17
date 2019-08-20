@@ -1,25 +1,31 @@
 .catalog-more {
   position: relative;
+  margin-top: 104px;
+  padding-bottom: 10px;
 
   &::before,
   &::after {
     content: "";
     position: absolute;
     right: -20px;
-    bottom: 205px;
     left: -20px;
     height: 1px;
     background: @bg-grey;
   }
 
+  &::before {
+    right: -20px;
+    bottom: 185px;
+  }
+
   &::after {
-    bottom: -10px;
+    bottom: -25px;
   }
 }
 
 .catalog-more__title {
-  margin-top: 108px;
-  margin-bottom: 0;
+  margin-top: 104px;
+  margin-bottom: 5px;
   font: normal 16px/20px @font-oswald;
   text-align: center;
   text-transform: uppercase;
@@ -29,7 +35,7 @@
 .catalog-more__plus::before {
   content: "";
   position: absolute;
-  top: -55px;
+  top: -50%;
   left: 50%;
   width: 31px;
   height: 31px;
@@ -39,20 +45,18 @@
 }
 
 .catalog-more__text {
-  margin-bottom: 25px;
+  margin-top: 0;
+  margin-bottom: 23px;
   font: normal 12px/16px @font-arial;
   text-align: center;
 }
 
-.catalog-more__button {
-  margin-bottom: 13px;
-}
-
 @media (min-width: @width-tablet) {
   .catalog-more {
-    width: calc(50% - 32px);
-    min-height: 440px;
-    margin-bottom: 50px;
+    width: 322px;
+    min-height: 394px;
+    margin-top: 82px;
+    padding-bottom: 38px;
     border: @b-light;
 
     &::before,
@@ -64,8 +68,8 @@
   .catalog-more__title {
     width: 55%;
     margin: 0 auto;
-    margin-top: 170px;
-    margin-bottom: 20px;
+    margin-top: 165px;
+    margin-bottom: 25px;
     font: normal 20px/20px @font-oswald;
   }
 
@@ -81,18 +85,19 @@
   .catalog-more__text {
     width: 70%;
     margin: 0 auto;
+    margin-bottom: 85px;
     font: normal 16px/20px @font-arial;
   }
 
   .catalog-more__button {
-    width: 75%;
+    width: 76%;
     margin: 0 auto;
-    margin-top: 90px;
   }
 }
 
 @media (min-width: @width-desktop) {
   .catalog-more {
     width: 20%;
+    min-height: 396px;
   }
 }

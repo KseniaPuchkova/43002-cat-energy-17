@@ -11,7 +11,7 @@ ymaps.ready(init);
       var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
         iconLayout: 'default#image',
         iconImageHref: 'img/map-pin.png',
-        iconImageSize: [80, 68],
+        iconImageSize: [70, 58],
         iconImageOffset: [-36, -53]
       });
 
@@ -42,5 +42,6 @@ ymaps.ready(init);
       });
     }
 
+    myMap.behaviors.disable('scrollZoom');
     myMap.geoObjects.add(myPlacemark);
   }
