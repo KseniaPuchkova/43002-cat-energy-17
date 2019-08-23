@@ -1,7 +1,7 @@
 .catalog-more {
   position: relative;
-  margin-top: 104px;
-  padding-bottom: 10px;
+  padding-top: 68px;
+  padding-bottom: 24px;
 
   &::before,
   &::after {
@@ -14,39 +14,39 @@
   }
 
   &::before {
-    right: -20px;
-    bottom: 185px;
+    top: 0%;
   }
 
   &::after {
-    bottom: -25px;
+    bottom: 0%;
   }
 }
 
 .catalog-more__title {
-  margin-top: 104px;
-  margin-bottom: 5px;
+  margin-top: 12px;
+  margin-bottom: 7px;
   font: normal 16px/20px @font-oswald;
   text-align: center;
   text-transform: uppercase;
   color: @black;
-}
 
-.catalog-more__plus::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: 50%;
-  width: 31px;
-  height: 31px;
-  margin-left: -15px;
-  background: url("../img/icon-plus-mobile.svg") no-repeat;
-  opacity: 0.2;
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 25px;
+    left: 50%;
+    width: 31px;
+    height: 31px;
+    margin-left: -15px;
+    background: url("../img/icon-plus-mobile.svg") no-repeat;
+    opacity: 0.2;
+  }
 }
 
 .catalog-more__text {
   margin-top: 0;
-  margin-bottom: 23px;
+  margin-bottom: 22px;
   font: normal 12px/16px @font-arial;
   text-align: center;
 }
@@ -54,8 +54,8 @@
 @media (min-width: @width-tablet) {
   .catalog-more {
     width: 322px;
-    min-height: 394px;
-    margin-top: 82px;
+    margin-top: 85px;
+    padding-top: 40px;
     padding-bottom: 38px;
     border: @b-light;
 
@@ -67,25 +67,21 @@
 
   .catalog-more__title {
     width: 55%;
-    margin: 0 auto;
-    margin-top: 165px;
-    margin-bottom: 25px;
+    margin: 125px auto 25px;
     font: normal 20px/20px @font-oswald;
-  }
 
-  .catalog-more__plus::before {
-    top: 55px;
-    left: 50%;
-    width: 60px;
-    height: 60px;
-    margin-left: -30px;
-    background: url("../img/icon-plus.svg") no-repeat;
-  }
+    &::before {
+      top: 55px;
+      width: 60px;
+      height: 60px;
+      margin-left: -30px;
+      background: url("../img/icon-plus.svg") no-repeat;
+   }
+}
 
   .catalog-more__text {
     width: 70%;
-    margin: 0 auto;
-    margin-bottom: 85px;
+    margin: 0 auto 80px;
     font: normal 16px/20px @font-arial;
   }
 
@@ -98,6 +94,9 @@
 @media (min-width: @width-desktop) {
   .catalog-more {
     width: 20%;
-    min-height: 396px;
+  }
+
+  .catalog-more__text {
+    margin-bottom: 85px;
   }
 }
