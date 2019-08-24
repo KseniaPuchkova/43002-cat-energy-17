@@ -22,8 +22,8 @@
   &::before {
     content: "";
     position: absolute;
+    top: -5px;
     left: 3px;
-    bottom: 5px;
     display: block;
     width: 50px;
     height: 50px;
@@ -39,16 +39,16 @@
   }
 
   &--slim::after {
+    top: -6px;
     left: 10px;
-    bottom: 6px;
     width: 35px;
     height: 49px;
     background: url("../img/icon-cat-slim.svg") no-repeat top left / 100% auto;
   }
 
   &--pro::after {
+    top: 6px;
     left: -6px;
-    bottom: 16px;
     width: 67px;
     height: 28px;
     background: url("../img/icon-cat-pro.svg") no-repeat top left / 100% auto;
@@ -56,7 +56,7 @@
 }
 
 .programs__description {
-  padding-right: 20px;
+  padding-right: 10px;
   padding-bottom: 25px;
   margin: 0;
   margin-bottom: 14px;
@@ -113,11 +113,12 @@
   .programs__item {
     width: 658px;
     margin: 0 auto;
-    margin-top: 33px;
-    padding: 35px 0 60px 50px;
+    margin-top: 30px;
+    padding: 40px 0 55px 52px;
   }
 
   .programs__title {
+    max-width: 50%;
     margin-left: 0;
     margin-bottom: 15px;
     padding-left: 0;
@@ -132,34 +133,36 @@
     }
 
     &--slim::after {
+      top: 7px;
       left: 425px;
-      bottom: -152px;
       width: 140px;
       height: 194px;
     }
 
     &--pro::after {
-      left: 363px;
-      bottom: -126px;
+      top: 60px;
+      left: 362px;
       width: 268px;
       height: 112px;
     }
   }
 
   .programs__description {
-    width: 340px;
-    padding: 0;
-    margin-bottom: 55px;
+    max-width: 340px;
+    padding-bottom: 0;
+    margin-bottom: 53px;
     font: normal 16px/24px @font-arial;
     border-bottom: none;
   }
 
   .programs__link {
+    padding-top: 7px;
+    padding-bottom: 7px;
     padding-right: 54px;
     font-size: 20px;
 
     &::after {
-      top: 0.3em;
+      top: 0.5em;
     }
   }
 }
@@ -167,7 +170,7 @@
 @media (min-width: @width-desktop) {
   .programs {
     margin: 0 auto;
-    margin-bottom: 70px;
+    margin-bottom: 72px;
   }
 
   .programs__container {
@@ -179,7 +182,7 @@
     width: 476px;
     margin: 0;
     margin-right: 80px;
-    padding: 30px 40px 60px 54px;
+    padding: 30px 40px 55px 54px;
 
     &:last-child {
       margin-right: 0;
@@ -187,37 +190,38 @@
   }
 
   .programs__title {
+    max-width: 90%;
     margin-top: 28px;
     margin-bottom: 52px;
     padding: 0;
     padding-top: 18px;
-    margin-left: 165px;
+    margin-left: 160px;
     padding-bottom: 20px;
 
     &::before {
       top: -12px;
-      left: -165px;
+      left: -163px;
       width: 100px;
       height: 100px;
     }
 
     &--slim::after {
-      left: -148px;
-      bottom: -6px;
+      top: -17px;
+      left: -154px;
       width: 70px;
       height: 97px;
     }
 
     &--pro::after {
-      left: -185px;
-      bottom: 9px;
+      top: 10px;
+      left: -180px;
       width: 134px;
       height: 56px;
     }
   }
 
   .programs__description {
-    width: 480px;
+    max-width: 465px;
     margin-bottom: 30px;
   }
 }
