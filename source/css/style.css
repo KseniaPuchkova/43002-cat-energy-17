@@ -458,7 +458,7 @@ img {
   .main-navigation__toggle--closed span {
     background-color: transparent;
     -webkit-transition: background-color 0.3s 0;
-    transition: background-color 0.3s 0;
+    transition: background-color 0.3s;
   }
   .main-navigation__toggle--closed span::before,
   .main-navigation__toggle--closed span::after {
