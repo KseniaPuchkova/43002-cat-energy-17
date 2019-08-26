@@ -35,6 +35,7 @@ gulp.task("css", function () {
 gulp.task("js", function () {
   return gulp.src("source/js/*.js")
     .pipe(js())
+    .pipe(rename({suffix: ".min"}))
     .pipe(gulp.dest("build/js"));
 });
 
@@ -77,7 +78,6 @@ gulp.task("copy", function () {
       "source/img/**",
       "source/*.ico",
       "source/img/favicon/**",
-      "source/js/**"
     ], {
       base: "source"
     })
@@ -100,6 +100,7 @@ gulp.task("server", function () {
   gulp.watch("source/less/**/*.less", gulp.series("css"));
   gulp.watch("source/img/{icon-vk,icon-insta,icon-fb,icon-mail,icon-phone,htmlacademy}.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
+  gulp.watch("source/js/*.js", gulp.series("js", "refresh"));
 });
 
 gulp.task("refresh", function (done) {

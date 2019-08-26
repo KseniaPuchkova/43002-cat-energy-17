@@ -457,7 +457,7 @@ img {
   }
   .main-navigation__toggle--closed span {
     background-color: transparent;
-    -webkit-transition: background-color 0.3s 0;
+    -webkit-transition: background-color 0.3s;
     transition: background-color 0.3s;
   }
   .main-navigation__toggle--closed span::before,
@@ -574,29 +574,11 @@ img {
   text-align: center;
   color: #ffffff;
 }
-.title__addicional {
-  width: auto;
-  font: normal 14px/18px "Oswald", "Arial", sans-serif;
-  text-align: left;
-  text-transform: uppercase;
-  color: #111111;
-}
-.title__addicional--color {
-  text-align: center;
-  color: #ffffff;
-}
 @media (min-width: 768px) {
   .title {
     max-width: 70%;
     font: normal 60px/60px "Oswald", "Arial", sans-serif;
     text-align: left;
-    color: #111111;
-  }
-  .title__addicional {
-    max-width: 70%;
-    font: normal 20px/30px "Oswald", "Arial", sans-serif;
-    text-align: left;
-    text-transform: uppercase;
     color: #111111;
   }
 }
@@ -614,6 +596,12 @@ img {
 .promo__title {
   margin: 0 auto 23px;
   padding-top: 25px;
+}
+.promo__slogan {
+  font: normal 14px/18px "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
 }
 .promo__image {
   display: block;
@@ -644,9 +632,13 @@ img {
     padding-left: 88px;
   }
   .promo__slogan {
+    max-width: 70%;
     margin-bottom: 45px;
     padding-right: 88px;
     padding-left: 88px;
+    font: normal 20px/30px "Oswald", "Arial", sans-serif;
+    text-align: left;
+    color: #111111;
   }
   .promo__image {
     position: absolute;
@@ -1190,7 +1182,7 @@ img {
 }
 @media (min-width: 1300px) {
   .example {
-    background: linear-gradient(to bottom, #ffffff 138px, transparent 138px, transparent), linear-gradient(to right, #f2f2f2, #f2f2f2 50%, #eaeaea 50%, #eaeaea);
+    background: linear-gradient(to bottom, #ffffff 130px, transparent 130px, transparent), linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%, #eaeaea);
     border-top: none;
   }
   .example__wrapper {
@@ -1213,7 +1205,6 @@ img {
     margin-bottom: 72px;
     padding-top: 0;
     white-space: nowrap;
-    overflow: hidden;
   }
   .example__description-wrapper {
     margin: 0;
@@ -1451,7 +1442,7 @@ img {
     margin-top: -65px;
     padding-right: 5px;
     padding-left: 103px;
-    background: linear-gradient(to bottom, #ffffff 203px, transparent 203px, transparent 100%), linear-gradient(to right, #f2f2f2 439px, #eaeaea 439px, #eaeaea 100%);
+    background: linear-gradient(to bottom, #ffffff 195px, transparent 195px, transparent 100%), linear-gradient(to right, #f2f2f2 439px, #eaeaea 439px, #eaeaea 100%);
   }
   .slider__container {
     min-height: 660px;
@@ -2055,6 +2046,10 @@ img {
 }
 .form__title-slogan {
   margin-bottom: 25px;
+  font: normal 14px/18px "Oswald", "Arial", sans-serif;
+  text-align: left;
+  text-transform: uppercase;
+  color: #111111;
 }
 .form__item {
   margin: 0;
@@ -2146,7 +2141,7 @@ img {
 }
 .form__label--radio {
   position: relative;
-  max-width: 90%;
+  width: 80%;
   padding-top: 5px;
   padding-left: 45px;
   cursor: pointer;
@@ -2170,7 +2165,7 @@ img {
 }
 .form__label--checkbox {
   position: relative;
-  max-width: 50%;
+  width: 80%;
   padding-left: 45px;
   cursor: pointer;
 }
@@ -2319,8 +2314,10 @@ img {
     margin-bottom: 53px;
   }
   .form__title-slogan {
+    max-width: 70%;
     margin-bottom: 65px;
     margin-left: 40px;
+    font: normal 20px/30px "Oswald", "Arial", sans-serif;
   }
   .form__item-wrapper {
     margin: 0;
