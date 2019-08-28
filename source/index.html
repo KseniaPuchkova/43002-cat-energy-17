@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
-  <link rel="icon" type="image/x-icon" sizes="16x16" href="favicon.ico">
+  <meta name="description" content="Интернет-магазин кошачей еды">
+  <link rel=" icon" type="image/x-icon" sizes="16x16" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
@@ -151,11 +152,11 @@
               </figure>
             </div>
             <div class="slider__toggles">
-              <label class="slider__toggle slider__toggle--before" for="before" tabindex="1">Было</label>
+              <label class="slider__toggle slider__toggle--before" for="before">Было</label>
               <div class="slider__scale">
-                <button class="slider__button"></button>
+                <button class="slider__button" type="button" aria-label="Показать изображения кота до и после похудения"></button>
               </div>
-              <label class="slider__toggle slider__toggle--after" for="after" tabindex="1">Стало</label>
+              <label class=" slider__toggle slider__toggle--after" for="after">Стало</label>
             </div>
           </div>
         </div>
@@ -171,6 +172,14 @@
           </address>
         </div>
       </div>
+      <picture>
+        <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp, img/bg-map-desktop@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp, img/bg-map-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="img/bg-map-mobile@1x.webp, img/bg-map-mobile@2x.webp 2x">
+        <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
+        <img class="contacts__map-image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="Схема проезда">
+      </picture>
       <div class="contacts__map" id="map"></div>
     </section>
   </main>
@@ -228,6 +237,6 @@
 
   </script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=1fb8eda5-a887-4404-86ce-509908bca748"></script>
-  <script src="js/map.min.js"></script>
+  <script rel="preload" src="js/map.min.js" as="script"></script>
 </body>
 </html>
